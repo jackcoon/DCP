@@ -5,6 +5,7 @@
 // My first reaction was to just create a nested for loop to go through and compare
 // each number and check if the sum exists.
 
+/**
 public class DCP{
 
      public static void main(String []args){
@@ -28,14 +29,16 @@ public class DCP{
         return false;
      }
      
-}
+}**/
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-/** Bonus: Can you do this in one pass? **/
-// For the bonus I sorted the array and then checked if the difference between the int that I was at
-// was to high or to low, and then moved the operator in from there so it was only one pass but with
-// pivots that slowly moved inward until the right combo was found
+/** Bonus: Can you do this in one pass? 
+ For the bonus I sorted the array and then checked if the difference between the int that I was at
+ was to high or to low, and then moved the operator in from there so it was only one pass but with
+ pivots that slowly moved inward until the right combo was found **/
+
+
 import java.util.Arrays;
 public class DCP{
 
@@ -70,5 +73,4 @@ public class DCP{
         }    
         return false;
     }   
-} 
-
+}
