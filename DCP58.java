@@ -2,7 +2,7 @@
 	Input: arr [] = {15, 16, 19, 20, 25, 1, 3, 4, 5, 7, 10, 14}. Find 5 .
 	Output: 8 (the index of 5 in the array) **/
 
-public class DCP{
+public class DCP58{
 
      public static void main(String []args){
          int[] arr = {18,19,20,21,22,23,35,37,39,41,42,4,8,15,16};

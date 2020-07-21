@@ -40,7 +40,7 @@ public class DCP{
 
 
 import java.util.Arrays;
-public class DCP{
+public class DCP1{
 
      public static void main(String []args){
         int[] arr = {10,15,3,7,6,9,12,14,8};
