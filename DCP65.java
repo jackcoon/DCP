@@ -1,34 +1,54 @@
 public class DCP65 {
+
     public static void main(String[] args) {
-        int [][] matrix = {
+        int [][] a = {
                 {1,  2,  3,  4,  5},
                 {6,  7,  8,  9,  10},
                 {11, 12, 13, 14, 15},
                 {16, 17, 18, 19, 20}
         };
 
-        //matrix.length = colums (or number of arrays; 0 -> n-1)
-        //matrix[0].length = rows (or number of items in an array 1 -> n)
-        //System.out.print(matrix.length);
-        //System.out.print(matrix[0].length);
-        int col,row;
-        int minCol, minRow;
-        col = row = 0;
-        minCol = minRow = 0;
-        col = matrix.length;
-        row = matrix[0].length;
-
-//        for(int i = 0; i < matrix.length; i++){
-//            for(int j = 0; j < matrix[0].length; j++){
-//
-//            }
-//        }
-
-        for(int i = 0; i < col; i++){
-            for(int j = 0; j < row; j++){
-                System.out.print(matrix[i][j] + " ");
-            }
+        int lastRow = a.length;
+        int lastCol = a[0].length;
+        int i, firstRow = 0, firstCol = 0; 
+        
+        while (firstRow < lastRow && firstCol < lastCol) { 
+        
+            // left -> right of remaining rows
+            for (i = firstCol; i < lastCol; ++i) { 
+                System.out.print(a[firstRow][i] + " "); 
+            } 
+            firstRow++;
+    
             System.out.print("\n");
-        }
+            
+            // Bottom -> top of Remaining Columns 
+            for (i = firstRow; i < lastRow; ++i) { 
+                System.out.print(a[i][lastCol - 1] + " "); 
+            } 
+            lastCol--;
+            
+            System.out.print("\n");
+                        
+            //Right -> left of Remaining Rows
+            if(firstRow < lastRow){
+                for (i = lastCol - 1; i >= firstCol; i--) { 
+                    System.out.print(a[lastRow - 1][i] + " "); 
+                }
+                lastRow--;
+            }
+            
+            System.out.print("\n");
+            
+            //Bottom -> Top of Remaining Columns
+            if(firstCol < lastCol){
+                for (i = lastRow - 1; i >= firstRow; i--) { 
+                    System.out.print(a[i][firstCol] + " "); 
+                }
+                firstCol++;
+            }
+            
+            System.out.print("\n");
+        } 
     }
 }
